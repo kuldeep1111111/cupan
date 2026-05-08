@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>DealZone – Coupons, Offers & Promo Codes India</title>
+ 
+ <!-- Bootstrap 5 CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+ <!-- Bootstrap Icons -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+ 
+ <style>
+ body { font-family: 'Poppins', sans-serif; background: #f4f6fb; }
+ h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; }
+ 
+ .brand-text { font-family:'Nunito',sans-serif; font-size:1.75rem; font-weight:900; color:#e8234a; letter-spacing:-1px; }
+ .brand-text b { color:#ff6b35; }
+ 
+ /* Search */
+ .search-wrap { position:relative; }
+ .search-wrap .bi-search { position:absolute; left:14px; top:50%; transform:translateY(-50%); color:#aaa; z-index:5; }
+ .search-wrap input { padding-left:38px !important; border-radius:50px !important; border:2px solid #e9ecef !important; font-size:.85rem; }
+ .search-wrap input:focus { border-color:#e8234a !important; box-shadow:none !important; }
+ 
+ /* Hero */
+ .hero-slide { min-height:260px; border-radius:1rem; display:flex; align-items:center; padding:2rem 3rem; }
+ .slide-1 { background:linear-gradient(135deg,#e8234a,#ff6b35); }
+ .slide-2 { background:linear-gradient(135deg,#1a1a2e,#16213e); }
+ .slide-3 { background:linear-gradient(135deg,#0f3460,#533483); }
+ 
+ /* Store pill */
+ .store-pill { display:inline-flex; flex-direction:column; align-items:center; gap:5px; padding:10px 14px; border-radius:14px; transition:all .2s; text-decoration:none; color:#444; }
+ .store-pill:hover { background:#fef0f3; transform:translateY(-2px); color:#e8234a; }
+ .store-icon-box { width:52px; height:52px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1rem; color:#fff; }
+ 
+ /* Coupon card */
+ .coupon-card { border-radius:16px !important; overflow:hidden; transition:all .25s; }
+ .coupon-card:hover { box-shadow:0 8px 28px rgba(232,35,74,.14) !important; transform:translateY(-4px); }
+ .code-box { background:#fef0f3; border:2px dashed #e8234a; border-radius:10px; overflow:hidden; display:flex; align-items:center; }
+ .code-text { font-weight:800; letter-spacing:2px; color:#e8234a; font-size:.9rem; flex:1; padding:8px 12px; }
+ .btn-copy { background:#e8234a; color:#fff; border:none; padding:10px 14px; font-size:.75rem; font-weight:700; white-space:nowrap; cursor:pointer; transition:background .2s; }
+ .btn-copy:hover { background:#c01a39; }
+ .btn-grab { background:linear-gradient(135deg,#e8234a,#ff6b35); color:#fff; border:none; font-weight:700; font-size:.85rem; transition:opacity .2s; border-radius:10px; padding:9px; }
+ .btn-grab:hover { opacity:.88; color:#fff; }
+ 
+ /* Deal card */
+ .deal-card { border-radius:14px !important; transition:all .2s; }
+ .deal-card:hover { box-shadow:0 6px 22px rgba(0,0,0,.1) !important; transform:translateY(-3px); }
+ .deal-emoji { width:80px; height:80px; border-radius:12px; background:#f4f6fb; display:flex; align-items:center; justify-content:center; font-size:2rem; flex-shrink:0; }
+ 
+ /* Cat chip hover */
+ .cat-chip:hover { background:#e8234a !important; color:#fff !important; border-color:#e8234a !important; }
+ 
+ /* Newsletter */
+ .newsletter-box { background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:1.25rem; }
+ .sub-input { border-radius:50px 0 0 50px !important; border:none !important; padding:12px 20px !important; font-size:.88rem; min-width:0; flex:1; }
+ .sub-input:focus { box-shadow:none !important; }
+ .sub-btn { border-radius:0 50px 50px 0; background:#e8234a; border:none; font-weight:700; padding:0 22px; color:#fff; white-space:nowrap; }
+ .sub-btn:hover { background:#c01a39; color:#fff; }
+ 
+ /* Modal */
+ .modal-header-red { background:linear-gradient(135deg,#e8234a,#ff6b35); }
+ .big-code { font-size:2rem; font-weight:900; color:#e8234a; letter-spacing:4px; }
+ 
+ /* Footer */
+ footer a { color:#9ca3af; text-decoration:none; font-size:.83rem; display:block; margin-bottom:7px; transition:color .2s; }
+ footer a:hover { color:#fff; }
+ .social-btn { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.08); display:inline-flex; align-items:center; justify-content:center; color:#9ca3af; transition:all .2s; text-decoration:none; }
+ .social-btn:hover { background:#e8234a; color:#fff; }
+ 
+ @media(max-width:768px){
+ .hero-slide { min-height:180px; padding:1.5rem; }
+ .hero-slide h2 { font-size:1.15rem; }
+ }
+ </style>
+</head>
+<body>
+ 
+<!-- ===== TOP BAR ===== -->
+<div class="text-white text-center py-2 small fw-semibold" style="background:linear-gradient(90deg,#e8234a,#ff6b35);">
+ 🎉 DealZone Exclusive — Up to <strong>90% OFF</strong> on Top Brands! &nbsp;<a href="#" class="text-white fw-bold">Shop Now →</a>
+</div>
+ 
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
+ <div class="container gap-3">
+ <a class="navbar-brand text-decoration-none p-0" href="#">
+ <span class="brand-text">Deal<b>Zone</b></span>
+ </a>
+ 
+ <button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+ 
+ <!-- Desktop -->
+ <div class="d-none d-lg-flex align-items-center flex-grow-1 gap-3">
+ <div class="search-wrap flex-grow-1" style="max-width:380px;">
+ <i class="bi bi-search"></i>
+ <input id="searchInput" type="text" class="form-control" placeholder="Search stores, coupons..." oninput="liveSearch(this.value)"/>
+ </div>
+ <ul class="navbar-nav flex-row gap-1">
+ <li class="nav-item"><a class="nav-link fw-semibold px-3 py-2 rounded-3" href="#"><i class="bi bi-shop me-1"></i>Stores</a></li>
+ <li class="nav-item"><a class="nav-link fw-semibold px-3 py-2 rounded-3" href="#"><i class="bi bi-grid me-1"></i>Categories</a></li>
+ <li class="nav-item"><a class="nav-link fw-semibold px-3 py-2 rounded-3" href="#"><i class="bi bi-fire me-1 text-danger"></i>Deals</a></li>
+ <li class="nav-item"><a class="nav-link fw-semibold px-3 py-2 rounded-3" href="#"><i class="bi bi-journal-text me-1"></i>Blog</a></li>
+ </ul>
+ <button class="btn btn-danger rounded-pill fw-bold px-4 ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">
+ <i class="bi bi-person-fill me-1"></i>Login
+ </button>
+ </div>
+ </div>
+</nav>
+ 
+<!-- ===== MOBILE OFFCANVAS ===== -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+ <div class="offcanvas-header border-bottom">
+ <span class="brand-text">Deal<b>Zone</b></span>
+ <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+ </div>
+ <div class="offcanvas-body d-flex flex-column gap-2">
+ <a href="#" class="btn btn-light text-start rounded-3 fw-semibold"><i class="bi bi-shop me-2 text-danger"></i>Stores</a>
+ <a href="#" class="btn btn-light text-start rounded-3 fw-semibold"><i class="bi bi-grid me-2 text-danger"></i>Categories</a>
+ <a href="#" class="btn btn-light text-start rounded-3 fw-semibold"><i class="bi bi-fire me-2 text-danger"></i>Deals</a>
+ <a href="#" class="btn btn-light text-start rounded-3 fw-semibold"><i class="bi bi-journal-text me-2 text-danger"></i>Blog</a>
+ <button class="btn btn-danger rounded-pill fw-bold mt-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+ <i class="bi bi-person-fill me-1"></i>Login / Sign Up
+ </button>
+ </div>
+</div>
+ 
+<!-- ===== LIVE SEARCH RESULTS ===== -->
+<div id="searchResults" class="container mt-1" style="display:none; position:relative; z-index:999;">
+ <div class="bg-white border rounded-3 shadow p-3" id="searchResultsInner"></div>
+</div>
+ 
+<!-- ===== HERO CAROUSEL ===== -->
+<div class="bg-white py-3">
+ <div class="container">
+ <div id="heroCarousel" class="carousel slide rounded-4 overflow-hidden shadow-sm" data-bs-ride="carousel" data-bs-interval="3500">
+ <div class="carousel-indicators">
+ <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" style="width:22px;border-radius:4px;background:#e8234a;"></button>
+ <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" style="width:8px;border-radius:50%;background:#ccc;"></button>
+ <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" style="width:8px;border-radius:50%;background:#ccc;"></button>
+ </div>
+ <div class="carousel-inner">
+ <div class="carousel-item active">
+ <div class="hero-slide slide-1">
+ <div>
+ <span class="badge bg-white bg-opacity-25 text-white mb-2" style="font-size:.72rem;">🔥 LIMITED TIME</span>
+ <h2 class="text-white fw-black mb-2">Save Big on<br>Online Shopping</h2>
+ <p class="text-white-50 mb-3 small">Exclusive coupons for Amazon, Flipkart, Myntra & more</p>
+ <button class="btn btn-light fw-bold rounded-pill px-4" style="color:#e8234a;">Grab Deals Now →</button>
+ </div>
+ </div>
+ </div>
+ <div class="carousel-item">
+ <div class="hero-slide slide-2">
+ <div>
+ <span class="badge bg-white bg-opacity-25 text-white mb-2" style="font-size:.72rem;">✈️ TRAVEL DEALS</span>
+ <h2 class="text-white fw-black mb-2">Flat 20% OFF<br>Flight Bookings</h2>
+ <p class="text-white-50 mb-3 small">MakeMyTrip, Goibibo, EaseMyTrip — best fares</p>
+ <button class="btn btn-light fw-bold rounded-pill px-4" style="color:#1a1a2e;">Book & Save →</button>
+ </div>
+ </div>
+ </div>
+ <div class="carousel-item">
+ <div class="hero-slide slide-3">
+ <div>
+ <span class="badge bg-white bg-opacity-25 text-white mb-2" style="font-size:.72rem;">🛍️ FASHION SALE</span>
+ <h2 class="text-white fw-black mb-2">Up to 87% OFF<br>Fashion Brands</h2>
+ <p class="text-white-50 mb-3 small">Myntra, AJIO, Nykaa — handpicked fashion deals</p>
+ <button class="btn btn-light fw-bold rounded-pill px-4" style="color:#0f3460;">Shop Fashion →</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+ <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== STORE LOGOS ===== -->
+<div class="bg-white border-bottom py-3">
+ <div class="container">
+ <div class="d-flex flex-wrap justify-content-center gap-1">
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#f57c00;">AM</div><small class="fw-semibold" style="font-size:.7rem;">Amazon</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#1a73e8;">FK</div><small class="fw-semibold" style="font-size:.7rem;">Flipkart</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#e91e8c;">MY</div><small class="fw-semibold" style="font-size:.7rem;">Myntra</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#d32f2f;">AJ</div><small class="fw-semibold" style="font-size:.7rem;">AJIO</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#00897b;">NK</div><small class="fw-semibold" style="font-size:.7rem;">Nykaa</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#5e35b1;">MM</div><small class="fw-semibold" style="font-size:.7rem;">MakeMyTrip</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#e8234a;">SW</div><small class="fw-semibold" style="font-size:.7rem;">Swiggy</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#fc8019;">ZM</div><small class="fw-semibold" style="font-size:.7rem;">Zomato</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#1565c0;">HS</div><small class="fw-semibold" style="font-size:.7rem;">Hostinger</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#2e7d32;">UD</div><small class="fw-semibold" style="font-size:.7rem;">Udemy</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#6a1b9a;">UB</div><small class="fw-semibold" style="font-size:.7rem;">Uber</small></a>
+ <a href="#" class="store-pill"><div class="store-icon-box" style="background:#0277bd;">CR</div><small class="fw-semibold" style="font-size:.7rem;">Coursera</small></a>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== TOP COUPONS ===== -->
+<div class="py-5">
+ <div class="container">
+ <div class="d-flex justify-content-between align-items-end mb-1">
+ <div>
+ <h4 class="fw-black mb-0">Today's <span class="text-danger">Top Coupons</span> & Offers</h4>
+ <p class="text-muted small mb-0">Verified & working codes — updated daily</p>
+ </div>
+ <a href="#" class="text-danger fw-bold small text-decoration-none">View All <i class="bi bi-arrow-right"></i></a>
+ </div>
+ 
+ <!-- Bootstrap Nav Pills as filter tabs -->
+ <ul class="nav nav-pills flex-wrap gap-1 my-3 bg-white p-2 rounded-3 border" id="couponTabs">
+ <li class="nav-item"><button class="nav-link active rounded-3 fw-semibold" onclick="filterCoupons('all',this)">🔥 All</button></li>
+ <li class="nav-item"><button class="nav-link rounded-3 fw-semibold" onclick="filterCoupons('travel',this)">✈️ Travel</button></li>
+ <li class="nav-item"><button class="nav-link rounded-3 fw-semibold" onclick="filterCoupons('fashion',this)">👗 Fashion</button></li>
+ <li class="nav-item"><button class="nav-link rounded-3 fw-semibold" onclick="filterCoupons('food',this)">🍕 Food</button></li>
+ <li class="nav-item"><button class="nav-link rounded-3 fw-semibold" onclick="filterCoupons('electronics',this)">📱 Electronics</button></li>
+ <li class="nav-item"><button class="nav-link rounded-3 fw-semibold" onclick="filterCoupons('education',this)">📚 Education</button></li>
+ </ul>
+ 
+ <div class="row g-3" id="couponsGrid"></div>
+ </div>
+</div>
+ 
+<!-- ===== DEALS OF THE DAY ===== -->
+<div class="py-5 bg-white">
+ <div class="container">
+ <div class="d-flex justify-content-between align-items-end mb-4">
+ <div>
+ <h4 class="fw-black mb-0">⚡ Deals <span class="text-danger">of the Day</span></h4>
+ <p class="text-muted small mb-0">Best product prices across top stores</p>
+ </div>
+ <a href="#" class="text-danger fw-bold small text-decoration-none">View All <i class="bi bi-arrow-right"></i></a>
+ </div>
+ <div class="row g-3" id="dealsGrid"></div>
+ </div>
+</div>
+ 
+<!-- ===== POPULAR CATEGORIES ===== -->
+<div class="py-5">
+ <div class="container">
+ <h4 class="fw-black mb-1">Browse <span class="text-danger">Categories</span></h4>
+ <p class="text-muted small mb-3">Find coupons by what you love</p>
+ <div>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-airplane me-1"></i>Flights</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-bag-heart me-1"></i>Fashion</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-phone me-1"></i>Electronics</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-cart4 me-1"></i>Groceries</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-geo-alt me-1"></i>Travel</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-capsule me-1"></i>Medicines</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-bus-front me-1"></i>Bus</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-book me-1"></i>Education</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-building me-1"></i>Hotels</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-tv me-1"></i>OTT</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-server me-1"></i>Hosting</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-gem me-1"></i>Jewellery</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-eye me-1"></i>Eyewear</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-palette me-1"></i>Beauty</a>
+ <a href="#" class="btn btn-outline-secondary cat-chip me-2 mb-2 rounded-pill fw-semibold" style="font-size:.8rem;"><i class="bi bi-bicycle me-1"></i>Bike Rentals</a>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== STATS STRIP ===== -->
+<div class="py-4 bg-danger text-white">
+ <div class="container">
+ <div class="row g-3 text-center">
+ <div class="col-6 col-md-3">
+ <div class="fw-black" style="font-size:1.8rem;">5000+</div>
+ <div class="small opacity-75">Active Coupons</div>
+ </div>
+ <div class="col-6 col-md-3">
+ <div class="fw-black" style="font-size:1.8rem;">1200+</div>
+ <div class="small opacity-75">Partner Stores</div>
+ </div>
+ <div class="col-6 col-md-3">
+ <div class="fw-black" style="font-size:1.8rem;">50L+</div>
+ <div class="small opacity-75">Happy Savers</div>
+ </div>
+ <div class="col-6 col-md-3">
+ <div class="fw-black" style="font-size:1.8rem;">₹200Cr+</div>
+ <div class="small opacity-75">Total Savings</div>
+ </div>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== FAQ ACCORDION ===== -->
+<div class="py-5 bg-white">
+ <div class="container">
+ <div class="row justify-content-center">
+ <div class="col-lg-8">
+ <h4 class="fw-black text-center mb-4">Frequently Asked <span class="text-danger">Questions</span></h4>
+ <div class="accordion rounded-3 overflow-hidden border" id="faqAccordion">
+ <div class="accordion-item border-0 border-bottom">
+ <h2 class="accordion-header">
+ <button class="accordion-button fw-semibold small" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+ How do I use a coupon code on DealZone?
+ </button>
+ </h2>
+ <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+ <div class="accordion-body text-muted small">
+ Simply click "COPY" on any coupon, go to the store website, add items to your cart, and paste the code at checkout. Discount is applied instantly!
+ </div>
+ </div>
+ </div>
+ <div class="accordion-item border-0 border-bottom">
+ <h2 class="accordion-header">
+ <button class="accordion-button collapsed fw-semibold small" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+ Are all coupon codes verified and working?
+ </button>
+ </h2>
+ <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+ <div class="accordion-body text-muted small">
+ Yes! Our team manually verifies all coupon codes every day. We show success rates to help you pick the best code.
+ </div>
+ </div>
+ </div>
+ <div class="accordion-item border-0 border-bottom">
+ <h2 class="accordion-header">
+ <button class="accordion-button collapsed fw-semibold small" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+ Is DealZone completely free to use?
+ </button>
+ </h2>
+ <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+ <div class="accordion-body text-muted small">
+ Absolutely! DealZone is 100% free for shoppers. We earn a small commission from stores when you shop — you pay nothing extra.
+ </div>
+ </div>
+ </div>
+ <div class="accordion-item border-0">
+ <h2 class="accordion-header">
+ <button class="accordion-button collapsed fw-semibold small" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+ How often are new coupons added?
+ </button>
+ </h2>
+ <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+ <div class="accordion-body text-muted small">
+ New coupons are added multiple times every day. Subscribe to our newsletter to get instant alerts for the hottest deals!
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== NEWSLETTER ===== -->
+<div class="py-5">
+ <div class="container">
+ <div class="newsletter-box text-white text-center p-5">
+ <i class="bi bi-bell-fill text-warning mb-3 d-block" style="font-size:2.5rem;"></i>
+ <h3 class="fw-black mb-1">Never Miss a Deal Again!</h3>
+ <p class="text-white-50 mb-4 small">Subscribe and get the best coupons delivered straight to your inbox</p>
+ <div class="d-flex justify-content-center">
+ <input type="email" id="emailInput" class="sub-input form-control" placeholder="Enter your email address..."/>
+ <button class="sub-btn btn" onclick="subscribe()">Subscribe <i class="bi bi-send-fill ms-1"></i></button>
+ </div>
+ <p id="subMsg" class="mt-3 small text-success" style="display:none;">✅ You're subscribed! Best deals coming your way.</p>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== FOOTER ===== -->
+<footer class="bg-dark text-white pt-5 pb-3">
+ <div class="container">
+ <div class="row g-4">
+ 
+ <div class="col-lg-3 col-md-6">
+ <div class="brand-text mb-2">Deal<b>Zone</b></div>
+ <p class="text-secondary small lh-lg">India's trusted coupons & deals marketplace. Save on shopping, travel, food, and more!</p>
+ <div class="d-flex flex-wrap gap-2 mt-3">
+ <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+ <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+ <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+ <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+ <a href="#" class="social-btn"><i class="bi bi-telegram"></i></a>
+ </div>
+ </div>
+ 
+ <div class="col-lg-2 col-md-6">
+ <h6 class="text-white fw-bold mb-3 text-uppercase" style="font-size:.78rem;letter-spacing:.8px;">Offers</h6>
+ <a href="#">City Offers</a>
+ <a href="#">Bank Offers</a>
+ <a href="#">Festival Offers</a>
+ <a href="#">Brand Offers</a>
+ <a href="#">Deals of the Day</a>
+ </div>
+ 
+ <div class="col-lg-2 col-md-6">
+ <h6 class="text-white fw-bold mb-3 text-uppercase" style="font-size:.78rem;letter-spacing:.8px;">Popular Stores</h6>
+ <a href="#">Amazon Coupons</a>
+ <a href="#">Flipkart Coupons</a>
+ <a href="#">Myntra Coupons</a>
+ <a href="#">Swiggy Coupons</a>
+ <a href="#">Zomato Coupons</a>
+ </div>
+ 
+ <div class="col-lg-2 col-md-6">
+ <h6 class="text-white fw-bold mb-3 text-uppercase" style="font-size:.78rem;letter-spacing:.8px;">Company</h6>
+ <a href="#">About Us</a>
+ <a href="#">Terms of Use</a>
+ <a href="#">Sitemap</a>
+ <a href="#">Feedback</a>
+ <a href="#">Contact Us</a>
+ </div>
+ 
+ <div class="col-lg-3 col-md-6">
+ <h6 class="text-white fw-bold mb-3 text-uppercase" style="font-size:.78rem;letter-spacing:.8px;">Contact Us</h6>
+ <a href="#"><i class="bi bi-envelope me-2 text-danger"></i>hello@dealzone.in</a>
+ <div class="alert border-0 mt-3 p-2" style="background:rgba(255,255,255,.05);border-radius:10px;">
+ <small class="text-secondary"><i class="bi bi-info-circle me-1 text-warning"></i>We may earn a commission on purchases via our links.</small>
+ </div>
+ </div>
+ 
+ </div>
+ 
+ <hr class="border-secondary mt-4"/>
+ <div class="row align-items-center">
+ <div class="col-md-6 text-center text-md-start">
+ <p class="text-secondary small mb-0">© 2026 DealZone — All Rights Reserved. Built with ❤️ in India 🇮🇳</p>
+ </div>
+ <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+ <span class="badge bg-danger me-1">5000+ Coupons</span>
+ <span class="badge bg-warning text-dark me-1">Daily Updated</span>
+ <span class="badge bg-success">100% Free</span>
+ </div>
+ </div>
+ </div>
+</footer>
+ 
+<!-- ===== COUPON MODAL ===== -->
+<div class="modal fade" id="couponModal" tabindex="-1">
+ <div class="modal-dialog modal-dialog-centered">
+ <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
+ <div class="modal-header modal-header-red text-white border-0">
+ <div>
+ <h5 class="modal-title fw-bold mb-0" id="modalStoreName"></h5>
+ <small class="opacity-75" id="modalOfferText"></small>
+ </div>
+ <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+ </div>
+ <div class="modal-body p-4">
+ <p class="text-muted small mb-3">Your coupon is ready! Copy & apply at checkout.</p>
+ <div class="rounded-3 p-3 text-center mb-4" style="background:#fef0f3;border:2px dashed #e8234a;">
+ <div class="big-code" id="modalCode">CODE</div>
+ <small class="text-muted">Tap button below to copy</small>
+ </div>
+ <button class="btn btn-danger w-100 rounded-3 fw-bold py-2" onclick="copyModalCode()">
+ <i class="bi bi-clipboard-check me-2"></i>Copy Code & Go to Store
+ </button>
+ <div id="copiedMsg" class="alert alert-success mt-3 py-2 text-center small" style="display:none;">✅ Copied to clipboard!</div>
+ </div>
+ </div>
+ </div>
+</div>
+ 
+<!-- ===== LOGIN MODAL ===== -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+ <div class="modal-dialog modal-dialog-centered">
+ <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
+ <div class="modal-header border-0 px-4 pt-4 pb-2">
+ <div>
+ <h5 class="fw-black mb-0">Welcome Back! 👋</h5>
+ <p class="text-muted small mb-0">Login to save coupons & get exclusive deals</p>
+ </div>
+ <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+ </div>
+ <div class="modal-body p-4">
+ <div class="d-grid gap-2 mb-3">
+ <button class="btn btn-outline-danger rounded-3 fw-semibold py-2"><i class="bi bi-google me-2"></i>Continue with Google</button>
+ <button class="btn rounded-3 fw-semibold py-2 text-white" style="background:#1877f2;"><i class="bi bi-facebook me-2"></i>Continue with Facebook</button>
+ </div>
+ <div class="d-flex align-items-center gap-2 text-muted small my-3">
+ <hr class="flex-grow-1 m-0"/> or use email <hr class="flex-grow-1 m-0"/>
+ </div>
+ <div class="mb-3">
+ <label class="form-label fw-semibold small">Email Address</label>
+ <input type="email" class="form-control rounded-3" placeholder="you@example.com"/>
+ </div>
+ <div class="mb-4">
+ <label class="form-label fw-semibold small">Password</label>
+ <input type="password" class="form-control rounded-3" placeholder="••••••••"/>
+ </div>
+ <div class="d-grid">
+ <button class="btn btn-danger rounded-3 fw-bold py-2"><i class="bi bi-box-arrow-in-right me-2"></i>Login to DealZone</button>
+ </div>
+ <p class="text-center text-muted small mt-3 mb-0">New here? <a href="#" class="text-danger fw-semibold text-decoration-none">Create a free account</a></p>
+ </div>
+ </div>
+ </div>
+</div>
+ 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+ 
+const coupons = [
+ { store:"Amazon", icon:"AM", color:"#f57c00", badge:"EXCLUSIVE", bc:"danger", desc:"Up To 90% OFF on Electronics, Fashion & More", code:"AMZDEAL90", cat:"electronics", uses:"34.2K" },
+ { store:"Flipkart", icon:"FK", color:"#1a73e8", badge:"SITEWIDE", bc:"warning", desc:"Mega Sale – Flat 70% OFF on All Categories", code:"FLIPBIG70", cat:"fashion", uses:"29.7K" },
+ { store:"MakeMyTrip", icon:"MM", color:"#5e35b1", badge:"TRAVEL", bc:"primary", desc:"Flat 20% OFF on Flights + Zero Convenience Fee", code:"MMTFLY20", cat:"travel", uses:"18.4K" },
+ { store:"Myntra", icon:"MY", color:"#e91e8c", badge:"HOT DEAL", bc:"danger", desc:"Red Hot Sale — 50%–90% OFF on Fashion", code:"MYNTRA50", cat:"fashion", uses:"41.1K" },
+ { store:"Swiggy", icon:"SW", color:"#e8234a", badge:"FOOD OFFER", bc:"success", desc:"Flat ₹100 OFF on First 3 Orders | New Users", code:"SWGNEW100", cat:"food", uses:"55.6K" },
+ { store:"Udemy", icon:"UD", color:"#2e7d32", badge:"LEARNING", bc:"success", desc:"Save Up to 97% on Best-Selling Courses", code:"UDEMY97", cat:"education", uses:"22.3K" },
+ { store:"Zomato", icon:"ZM", color:"#fc8019", badge:"FOOD DEAL", bc:"warning", desc:"Flat 40% OFF on Orders Above ₹299", code:"ZOM40NOW", cat:"food", uses:"48.2K" },
+ { store:"Goibibo", icon:"GB", color:"#e91e8c", badge:"TRAVEL", bc:"danger", desc:"Up to 30% OFF on Hotels + Extra 10% Cashback", code:"GOIHOTEL30", cat:"travel", uses:"12.9K" },
+ { store:"boAt", icon:"BT", color:"#1565c0", badge:"ELECTRONICS", bc:"primary", desc:"Up to 40% OFF on Earphones & Headphones", code:"BOAT40OFF", cat:"electronics", uses:"19.4K" },
+ { store:"Coursera", icon:"CR", color:"#0277bd", badge:"LEARNING", bc:"info", desc:"7-Day Free Trial on Any Coursera Plus Plan", code:"COURSFREE7", cat:"education", uses:"8.7K" },
+ { store:"AJIO", icon:"AJ", color:"#d32f2f", badge:"FASHION", bc:"danger", desc:"Extra 15% OFF on AJIO Brands — All Users", code:"AJIO15EX", cat:"fashion", uses:"31.5K" },
+ { store:"Uber", icon:"UB", color:"#6a1b9a", badge:"SITEWIDE", bc:"secondary",desc:"Flat 50% OFF on First 3 Rides — Up to ₹100/ride", code:"UBERNEW50", cat:"travel", uses:"67.2K" },
+];
+ 
+const deals = [
+ { name:"boAt Airdopes 141 TWS Earbuds", store:"Amazon", emoji:"🎧", cur:"₹999", orig:"₹2,999", off:"67%" },
+ { name:"Noise ColorFit Pro 4 Smartwatch", store:"Flipkart", emoji:"⌚", cur:"₹1,499", orig:"₹4,999", off:"70%" },
+ { name:"Men's Casual Linen Shirt", store:"Myntra", emoji:"👕", cur:"₹599", orig:"₹1,999", off:"70%" },
+ { name:"Prestige Electric Kettle 1.5L", store:"Amazon", emoji:"☕", cur:"₹449", orig:"₹899", off:"50%" },
+];
+ 
+function renderCoupons(filter) {
+ const list = filter === 'all' ? coupons : coupons.filter(c => c.cat === filter);
+ document.getElementById('couponsGrid').innerHTML = list.map(c => `
+ <div class="col-xl-3 col-lg-4 col-md-6">
+ <div class="card coupon-card border h-100">
+ <div class="card-header bg-white d-flex align-items-center gap-3 py-3 border-bottom">
+ <div class="store-icon-box flex-shrink-0" style="background:${c.color};">${c.icon}</div>
+ <div class="flex-grow-1 overflow-hidden">
+ <div class="fw-bold small text-truncate">${c.store}</div>
+ <div class="text-muted" style="font-size:.72rem;">${c.uses} used today</div>
+ </div>
+ <span class="badge bg-${c.bc} bg-opacity-10 text-${c.bc}" style="font-size:.65rem;font-weight:700;">${c.badge}</span>
+ </div>
+ <div class="card-body d-flex flex-column gap-3">
+ <p class="fw-semibold small mb-0 lh-sm">${c.desc}</p>
+ <div class="code-box">
+ <span class="code-text">${c.code}</span>
+ <button class="btn-copy" onclick="quickCopy('${c.code}',this)"><i class="bi bi-clipboard"></i> COPY</button>
+ </div>
+ <button class="btn btn-grab w-100 fw-bold" onclick="openCouponModal('${c.store}','${c.desc}','${c.code}')">GRAB NOW →</button>
+ <div class="text-muted mt-auto" style="font-size:.72rem;"><i class="bi bi-clock me-1"></i>Expires in 2 days</div>
+ </div>
+ </div>
+ </div>
+ `).join('');
+}
+ 
+function renderDeals() {
+ document.getElementById('dealsGrid').innerHTML = deals.map(d => `
+ <div class="col-lg-3 col-md-6">
+ <div class="card deal-card border p-3">
+ <div class="d-flex align-items-center gap-3">
+ <div class="deal-emoji">${d.emoji}</div>
+ <div>
+ <div class="fw-bold small">${d.name}</div>
+ <div class="text-muted small"><i class="bi bi-shop me-1"></i>${d.store}</div>
+ <div class="d-flex align-items-center gap-2 mt-2 flex-wrap">
+ <span class="fw-black text-danger" style="font-size:1.05rem;">${d.cur}</span>
+ <span class="text-muted text-decoration-line-through small">${d.orig}</span>
+ <span class="badge bg-success bg-opacity-10 text-success">${d.off} OFF</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ `).join('');
+}
+ 
+function filterCoupons(cat, el) {
+ document.querySelectorAll('#couponTabs .nav-link').forEach(t => t.classList.remove('active'));
+ el.classList.add('active');
+ renderCoupons(cat);
+}
+ 
+function openCouponModal(store, offer, code) {
+ document.getElementById('modalStoreName').textContent = store;
+ document.getElementById('modalOfferText').textContent = offer;
+ document.getElementById('modalCode').textContent = code;
+ document.getElementById('copiedMsg').style.display = 'none';
+ new bootstrap.Modal(document.getElementById('couponModal')).show();
+}
+ 
+function copyModalCode() {
+ navigator.clipboard.writeText(document.getElementById('modalCode').textContent).catch(()=>{});
+ document.getElementById('copiedMsg').style.display = 'block';
+}
+ 
+function quickCopy(code, btn) {
+ navigator.clipboard.writeText(code).catch(()=>{});
+ const orig = btn.innerHTML;
+ btn.innerHTML = '<i class="bi bi-check2"></i> COPIED!';
+ btn.style.background = '#2e7d32';
+ setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 2000);
+}
+ 
+function subscribe() {
+ const v = document.getElementById('emailInput').value.trim();
+ if (!v || !v.includes('@')) { alert('Please enter a valid email!'); return; }
+ document.getElementById('subMsg').style.display = 'block';
+ document.getElementById('emailInput').value = '';
+}
+ 
+const searchData = coupons.map(c => ({ label:`${c.store} — ${c.desc}`, code:c.code }));
+function liveSearch(val) {
+ const box = document.getElementById('searchResults');
+ const inner = document.getElementById('searchResultsInner');
+ if (!val.trim()) { box.style.display = 'none'; return; }
+ const res = searchData.filter(s => s.label.toLowerCase().includes(val.toLowerCase())).slice(0,5);
+ if (!res.length) { box.style.display = 'none'; return; }
+ inner.innerHTML = res.map(r => `
+ <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+ <span class="small fw-semibold">${r.label}</span>
+ <span class="badge bg-danger bg-opacity-10 text-danger ms-2">${r.code}</span>
+ </div>`).join('');
+ box.style.display = 'block';
+}
+document.addEventListener('click', e => {
+ if (!e.target.closest('#searchResults') && !e.target.closest('#searchInput'))
+ document.getElementById('searchResults').style.display = 'none';
+});
+ 
+renderCoupons('all');
+renderDeals();
+</script>
+</body>
+</html>
